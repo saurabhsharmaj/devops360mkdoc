@@ -1,6 +1,6 @@
 # Homepage
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+For full documentation visit [https://saurabhsharmaj.github.io/devops360mkdoc/](https://saurabhsharmaj.github.io/devops360mkdoc/).
 
 ## Code Annotation Examples
 
