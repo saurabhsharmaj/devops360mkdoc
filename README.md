@@ -1,5 +1,5 @@
 # mkdocs-material-youtube-tutorial
 
-Supporting code for my YouTube tutorial video:
+https://saurabhsharmaj.github.io/devops360mkdoc/
 
-[![Image.png](https://i.ytimg.com/vi/uPMxUnBjGG8/maxresdefault.jpg)
+[![Image.png](https://i.ytimg.com/vi/uPMxUnBjGG8/maxresdefault.jpg)]
