@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="\css\file.css" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+    .p{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-md-5">
+        <p>Here are answers to your interview questions on Linux commands:</p>
+        <ol>
+            <li>
+                <p>
+                    <strong>How to login on remote Linux machine?</strong>
+                </p>
+                <ul>
+                    <li>Use the ssh command:</li>
+                    <code>ssh username@remote_host</code><br>
+                    <code>ssh username@remote_host</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>How to switch user?</strong>
+                </p>
+                <ul>
+                    <li>Use the su command:</li>
+                    <code>su - username</code>
+                    <li>Or use sudo to run a command as another user:</li>
+                    <code>sudo -u username command</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>How to search if a process is running (like Tomcat)?</strong>
+                </p>
+                <ul>
+                    <li>Use the ps command along with grep</li>
+                    <code>ps aux | grep tomcat</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>How to check the PID of any process?</strong>
+                </p>
+                <ul>
+                    <li>Use the pidof command:</li>
+                    <code>pidof process_name</code>
+                    <li>Or use ps combined with grep</li>
+                    <code>ps aux | grep process_name</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>How to kill the Process?</strong>
+                </p>
+                <ul>
+                    <li>Use the kill command with -9 option:</li>
+                    <code>Kill-9 PID</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>How to change or check ownership of any file (chown)?</strong>
+                </p>
+                <ul>
+                    <li>To check ownership:</li>
+                    <code>ls-1 filename</code>
+                    <li>To change ownership:</li>
+                    <code>sudo chown user:group filename</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>How to set permissions on any file/folder (chmod)?</strong>
+                </p>
+                <ul>
+                    <li>To change permissions:</li>
+                    <code>chmod 755 filename</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>How to check the logs?</strong>
+                </p>
+                <ul>
+                    <li>Use commands like <code>tail</code>, <code>cat</code>, or <code>less</code></li>
+                    <code>tail-f /var/log/syslog</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>What is the use of the less command?</strong>
+                </p>
+                <ul>
+                    <li>less is used to view the contents of a file one screen at a time:</li>
+                    <code>less filename</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>How to create a service in Linux and start/stop/restart it?</strong>
+                </p>
+                <ul>
+                    <li>To create a service, you usually define a systemd unit file in /etc/systemd/system ?</li>
+                    <li>To start a service:</li>
+                    <code>sudo systemctl start service_name</code>
+                    <li>To stop a service:</li>
+                    <code>sudo systemctl stop service_name</code>
+                    <li>To restart a service:</li>
+                    <code>sudo systemctl restart service_name</code>
+
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>How to search a keyword in a file?</strong>
+                </p>
+                <ul>
+                    <li>use the grep commend:</li>
+                    <code>grep keyword filename</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>How to check if a file is available in the system?</strong>
+                </p>
+                <ul>
+                    <li>use the find command:</li>
+                    <code>find /path/to/search -name filename</code>
+                    <li>Or use locate if the mlocate database is updated:</li>
+                    <code>locate filename</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>Networking connectivity commands:</strong>
+                </p>
+                <ul>
+                    <li>nc (netcat):</li>
+                    <code>nc -zv hostname port</code>
+                    <li>ping:</li>
+                    <code>ping hostname</code>
+                    <li>telnet:</li>
+                    <code>telnet hostname port</code>
+                    <li>lsof:</li>
+                    <code>lsof -i</code>
+                    <li>nslookup:</li>
+                    <code>nslookup hostname</code>
+
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>Firewall check command:</strong>
+                </p>
+                <ul>
+                    <li>Use ufw for Uncomplicated Firewall:</li>
+                    <code>sudo ufw status</code>
+                    <li>or use iptables</li>
+                    <code>sudo iptables -L</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>Check the OS version:</strong>
+                </p>
+                <ul>
+                    <li>Use the lsb_release command:</li>
+                    <code>lsb_release -a</code>
+                    <li>Or check the contents of /etc/os-release:</li>
+                    <code>cat /etc/os-release</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>OS troubleshooting commands:</strong>
+                </p>
+                <ul>
+                    <li>Top:</li>
+                    <code>top</code>
+                    <li>Du:</li>
+                    <code>du -sh /path/to/directory</code>
+                    <li>Df:</li>
+                    <code>df -h</code>
+                    <li>Free:</li>
+                    <code>free -h</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>Crontab or job scheduling:</strong>
+                </p>
+                <ul>
+                    <li>To edit the crontab:</li>
+                    <code>crontab -e</code>
+                    <li>To list current cron jobs:</li>
+                    <code>contrab -l</code>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <p>
+                    <strong>Network packet analysis and tracing:</strong>
+                </p>
+                <ul>
+                    <li>tcpdump:</li>
+                    <code>sudo tcpdump -i interface</code>
+                    <li>traceroute:</li>
+                    <code>traceroute hostname</code>
+                </ul>
+            </li>
+        </ol>
+
+    </div>
+</body>
+
+</html>
